@@ -12,3 +12,10 @@ function preencher(numero) {
       document.getElementById("visor").value += numero;
     }
   }
+
+  // Função para zerar o visor
+function zerar() {
+    document.getElementById("visor").value = 0;
+    valor1 = "";
+    operador = "";
+  }

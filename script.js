@@ -107,3 +107,37 @@ function zerar() {
     valor1 = "";
     operador = "";
   }
+
+
+  //Demais operações
+
+  //Usando ponto
+  function virgula() {
+    document.getElementById("visor").value += ".";
+  }
+
+  // Função para alterar para número positivo ou negativo
+function maisMenos() {
+    if (document.getElementById("visor").value == "") {
+      document.getElementById("visor").value = "-";
+    } else {
+      document.getElementById("visor").value = "";
+    }
+  }
+
+  // Função para apagar o último número do visor
+function backspace() {
+    del = document.getElementById("visor").value;
+    document.getElementById("visor").value = del.length;
+    document.getElementById("visor").value = del.substr(0, del.length - 1);
+  }
+  
+
+  //Porcentagem
+  function porcentagem() {
+    valor2 = parseFloat(document.getElementById("visor").value);
+    if (operador == "*") {
+      resultado = (valor1 / 100) * valor2;
+    }
+    document.getElementById("visor").value = resultado;
+  }
